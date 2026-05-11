@@ -43,6 +43,12 @@ git clone https://github.com/salines/parcelbridge.git
 cd parcelbridge
 ```
 
+Create the environment file:
+
+```bash
+cp config/.env.ddev config/.env
+```
+
 Start DDEV:
 
 ```bash
