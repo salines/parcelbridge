@@ -1,5 +1,7 @@
 # ParcelBridge: CakePHP 5 App for Package Forwarding and Shipment Workflows
 
+![ParcelBridge](parcelbridge.png)
+
 ParcelBridge is an open-source CakePHP 5 starter application for developers building package forwarding, warehouse intake, invoice review, ship request, and shipment tracking workflows.
 
 The project is designed as a backend-first starting point, not as a finished SaaS product. Its focus is a solid CakePHP 5 structure, database schema, business workflow logic, authorization, API endpoints, and automated tests. The user interface is intentionally minimal and scaffold/mockup-style, so the workflow can be tested, extended, and adapted quickly for a specific business case.
