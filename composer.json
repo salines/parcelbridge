@@ -1,6 +1,6 @@
 {
-    "name": "cakephp/app",
-    "description": "CakePHP skeleton app",
+    "name": "salines/parcelbridge",
+    "description": "CakePHP 5 application for package forwarding and shipment workflows",
     "license": "MIT",
     "funding": [
         {
@@ -9,7 +9,7 @@
         }
     ],
     "type": "project",
-    "homepage": "https://cakephp.org",
+    "homepage": "https://github.com/salines/parcelbridge",
     "require": {
         "php": ">=8.3",
         "cakephp/authentication": "^4.1",
