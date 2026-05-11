@@ -26,10 +26,6 @@ ParcelBridge is intended for developers who want a practical foundation for a cu
 
 The project was created from the official `cakephp/app` skeleton. DDEV is used so the reviewer can run the same local LAMP-style environment without manual PHP, Apache, or database setup.
 
-## License
-
-ParcelBridge is open-source software licensed under the MIT License. See [LICENSE](LICENSE).
-
 ## Installation
 
 Prerequisites:
@@ -261,3 +257,7 @@ ddev exec composer cs-fix
 - UI uses CakePHP baked templates with targeted MVP workflow cleanup, not a polished custom design.
 - Client registration is not implemented because it is out of scope for the MVP.
 - Email notifications, payments, and production deployment are out of scope.
+
+## License
+
+ParcelBridge is open-source software licensed under the MIT License. See [LICENSE](LICENSE).
