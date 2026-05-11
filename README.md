@@ -1,11 +1,11 @@
 # ParcelBridge: CakePHP 5 App for Package Forwarding and Shipment Workflows
 
-![ParcelBridge](parcelbridge.png)
-
 [![CI](https://github.com/salines/parcelbridge/actions/workflows/ci.yml/badge.svg)](https://github.com/salines/parcelbridge/actions/workflows/ci.yml)
 [![PHP](https://img.shields.io/badge/PHP-8.3%2B-777BB4?logo=php)](https://www.php.net)
 [![CakePHP](https://img.shields.io/badge/CakePHP-5.x-D33C44?logo=cakephp)](https://cakephp.org)
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
+
+![ParcelBridge](parcelbridge.png)
 
 ParcelBridge is an open-source CakePHP 5 starter application for developers building package forwarding, warehouse intake, invoice review, ship request, and shipment tracking workflows.
 
@@ -37,20 +37,22 @@ The project was created from the official `cakephp/app` skeleton. DDEV is used s
 
 Prerequisites:
 
-- Git
 - Docker or [OrbStack](https://orbstack.dev)
 - [DDEV](https://ddev.com)
 
-Clone the repository:
+### Via Composer (recommended)
 
 ```bash
-git clone https://github.com/salines/parcelbridge.git
-cd parcelbridge
+composer create-project salines/parcelbridge myapp
+cd myapp
+cp config/.env.ddev config/.env
 ```
 
-Create the environment file:
+### Via Git clone
 
 ```bash
+git clone https://github.com/salines/parcelbridge.git myapp
+cd myapp
 cp config/.env.ddev config/.env
 ```
 
