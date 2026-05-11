@@ -69,6 +69,7 @@ require CAKE . 'functions.php';
 if (!env('APP_NAME') && file_exists(CONFIG . '.env')) {
     $dotenv = new \josegonzalez\Dotenv\Loader([CONFIG . '.env']);
     $dotenv->parse()
+        ->skipExisting()
         ->putenv()
         ->toEnv()
         ->toServer();
