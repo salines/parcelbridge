@@ -1,0 +1,1284 @@
+# LANGUAGE translation of CakePHP Application
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2026-05-11 08:44+0000\n"
+"PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: ./src/Controller/Admin/ClientsController.php:80
+#: ./src/Controller/Admin/ClientsController.php:104
+#: ./src/Controller/Admin/PackagesController.php:157
+#: ./src/Controller/Admin/PackagesController.php:185
+#: ./src/Controller/Admin/UsersController.php:73
+#: ./src/Controller/Admin/UsersController.php:96
+msgid "The record has been saved."
+msgstr ""
+
+#: ./src/Controller/Admin/ClientsController.php:84
+#: ./src/Controller/Admin/ClientsController.php:108
+#: ./src/Controller/Admin/PackagesController.php:161
+#: ./src/Controller/Admin/PackagesController.php:189
+#: ./src/Controller/Admin/UsersController.php:77
+#: ./src/Controller/Admin/UsersController.php:100
+msgid "The record could not be saved. Please check the form and try again."
+msgstr ""
+
+#: ./src/Controller/Admin/ClientsController.php:127
+#: ./src/Controller/Admin/PackagesController.php:210
+#: ./src/Controller/Admin/UsersController.php:118
+msgid "The record has been deleted."
+msgstr ""
+
+#: ./src/Controller/Admin/ClientsController.php:129
+#: ./src/Controller/Admin/PackagesController.php:212
+#: ./src/Controller/Admin/UsersController.php:120
+msgid "The record could not be deleted. Please try again."
+msgstr ""
+
+#: ./src/Controller/Admin/InvoicesController.php:110
+#: ./src/Controller/Api/InvoicesController.php:84
+msgid "Only packages pending invoice review can be approved."
+msgstr ""
+
+#: ./src/Controller/Admin/InvoicesController.php:129
+#: ./src/Controller/Api/InvoicesController.php:103
+msgid "Invoice approved."
+msgstr ""
+
+#: ./src/Controller/Admin/InvoicesController.php:135
+msgid "The invoice has been approved."
+msgstr ""
+
+#: ./src/Controller/Admin/InvoicesController.php:140
+#: ./src/Controller/Api/InvoicesController.php:109
+msgid "The invoice could not be approved. Please try again."
+msgstr ""
+
+#: ./src/Controller/Admin/InvoicesController.php:157
+#: ./src/Controller/Api/InvoicesController.php:130
+msgid "Enter a review note before marking the invoice for review."
+msgstr ""
+
+#: ./src/Controller/Admin/InvoicesController.php:165
+#: ./src/Controller/Api/InvoicesController.php:138
+msgid "Only packages pending invoice review can be marked for review."
+msgstr ""
+
+#: ./src/Controller/Admin/InvoicesController.php:190
+msgid "The invoice has been marked for review."
+msgstr ""
+
+#: ./src/Controller/Admin/InvoicesController.php:195
+#: ./src/Controller/Api/InvoicesController.php:163
+msgid "The invoice could not be marked for review. Please try again."
+msgstr ""
+
+#: ./src/Controller/Admin/InvoicesController.php:211
+#: ./src/Controller/Client/InvoicesController.php:76
+msgid "The invoice file could not be found."
+msgstr ""
+
+#: ./src/Controller/Admin/PackagesController.php:152
+msgid "Package received at warehouse."
+msgstr ""
+
+#: ./src/Controller/Admin/PackagesController.php:228
+#: ./src/Controller/Api/PackagesController.php:177
+msgid "Package arrived at destination and is ready for pickup."
+msgstr ""
+
+#: ./src/Controller/Admin/PackagesController.php:241
+#: ./src/Controller/Api/PackagesController.php:189
+msgid "Package delivered to the client."
+msgstr ""
+
+#: ./src/Controller/Admin/PackagesController.php:259
+msgid "The package status has been updated."
+msgstr ""
+
+#: ./src/Controller/Admin/PackagesController.php:269
+#: ./src/Controller/Api/PackagesController.php:214
+msgid "The package status could not be updated."
+msgstr ""
+
+#: ./src/Controller/Admin/ShipRequestsController.php:131
+#: ./src/Controller/Api/ShipRequestsController.php:126
+msgid "Only submitted ship requests can be processed."
+msgstr ""
+
+#: ./src/Controller/Admin/ShipRequestsController.php:139
+#: ./src/Controller/Api/ShipRequestsController.php:133
+msgid "All packages must be ready for shipment before processing."
+msgstr ""
+
+#: ./src/Controller/Admin/ShipRequestsController.php:165
+#: ./src/Controller/Api/ShipRequestsController.php:159
+msgid "Ship request processed."
+msgstr ""
+
+#: ./src/Controller/Admin/ShipRequestsController.php:176
+#: ./src/Controller/Api/ShipRequestsController.php:170
+msgid "The ship request could not be processed. Please try again."
+msgstr ""
+
+#: ./src/Controller/Admin/ShipRequestsController.php:181
+msgid "The ship request has been processed."
+msgstr ""
+
+#: ./src/Controller/Api/PackagesController.php:87
+#: ./src/Controller/Client/PackagesController.php:131
+msgid "Please upload a valid invoice file."
+msgstr ""
+
+#: ./src/Controller/Api/PackagesController.php:94
+#: ./src/Controller/Client/PackagesController.php:138
+msgid "The invoice must be a PDF, JPG, or PNG file."
+msgstr ""
+
+#: ./src/Controller/Api/PackagesController.php:100
+#: ./src/Controller/Client/PackagesController.php:144
+msgid "The invoice file must be 5 MB or smaller."
+msgstr ""
+
+#: ./src/Controller/Api/PackagesController.php:148
+#: ./src/Controller/Client/PackagesController.php:191
+msgid "Client uploaded invoice."
+msgstr ""
+
+#: ./src/Controller/Api/PackagesController.php:159
+#: ./src/Controller/Client/PackagesController.php:207
+msgid "The invoice could not be uploaded. Please try again."
+msgstr ""
+
+#: ./src/Controller/Api/ShipRequestsController.php:85
+#: ./src/Controller/Client/ShipRequestsController.php:125
+msgid "Your account is not linked to a client."
+msgstr ""
+
+#: ./src/Controller/Api/ShipRequestsController.php:104
+#: ./src/Controller/Client/ShipRequestsController.php:157
+msgid "The ship request could not be submitted. Please try again."
+msgstr ""
+
+#: ./src/Controller/Api/UsersController.php:42
+#: ./src/Controller/UsersController.php:59
+msgid "Invalid email or password."
+msgstr ""
+
+#: ./src/Controller/Client/PackagesController.php:197
+msgid "The invoice has been uploaded."
+msgstr ""
+
+#: ./src/Controller/Client/ShipRequestsController.php:152
+msgid "The ship request has been submitted."
+msgstr ""
+
+#: ./src/Controller/UsersController.php:106
+msgid "If the account exists, password reset instructions have been sent."
+msgstr ""
+
+#: ./src/Controller/UsersController.php:135
+msgid "The password reset link is invalid or expired."
+msgstr ""
+
+#: ./src/Controller/UsersController.php:145
+#: ./src/Controller/UsersController.php:224
+msgid "The new password and confirmation must match."
+msgstr ""
+
+#: ./src/Controller/UsersController.php:154
+msgid "Your password has been reset. You can now log in."
+msgstr ""
+
+#: ./src/Controller/UsersController.php:159
+msgid "Your password could not be reset. Please try again."
+msgstr ""
+
+#: ./src/Controller/UsersController.php:195
+msgid "Your account has been updated."
+msgstr ""
+
+#: ./src/Controller/UsersController.php:200
+msgid "Your account could not be updated. Please try again."
+msgstr ""
+
+#: ./src/Controller/UsersController.php:222
+msgid "The current password is not correct."
+msgstr ""
+
+#: ./src/Controller/UsersController.php:231
+msgid "Your password has been changed."
+msgstr ""
+
+#: ./src/Controller/UsersController.php:236
+msgid "Your password could not be changed. Please try again."
+msgstr ""
+
+#: ./src/Controller/UsersController.php:267
+msgid "Reset your ParcelBridge password"
+msgstr ""
+
+#: ./src/Controller/UsersController.php:268
+msgid "Use this link to reset your ParcelBridge password:\n\n{0}\n\nThis link expires in one hour."
+msgstr ""
+
+#: ./src/Middleware/HostHeaderMiddleware.php:41
+msgid "Application base URL is not configured. Set APP_FULL_BASE_URL or configure App.fullBaseUrl."
+msgstr ""
+
+#: ./src/Middleware/HostHeaderMiddleware.php:52
+msgid "The request host does not match the configured application host."
+msgstr ""
+
+#: ./src/Model/Enum/DimensionUnit.php:18
+msgid "Inches"
+msgstr ""
+
+#: ./src/Model/Enum/InvoiceReviewStatus.php:20
+msgid "Pending"
+msgstr ""
+
+#: ./src/Model/Enum/InvoiceReviewStatus.php:21
+msgid "Approved"
+msgstr ""
+
+#: ./src/Model/Enum/InvoiceReviewStatus.php:22
+#: ./src/Model/Enum/PackageStatus.php:28
+msgid "Needs Review"
+msgstr ""
+
+#: ./src/Model/Enum/PackageStatus.php:25
+msgid "Ready to Send"
+msgstr ""
+
+#: ./src/Model/Enum/PackageStatus.php:26
+msgid "Pending Invoice Review"
+msgstr ""
+
+#: ./src/Model/Enum/PackageStatus.php:27
+msgid "Invoice Approved"
+msgstr ""
+
+#: ./src/Model/Enum/PackageStatus.php:29
+msgid "Ship Requested"
+msgstr ""
+
+#: ./src/Model/Enum/PackageStatus.php:30
+msgid "Shipped"
+msgstr ""
+
+#: ./src/Model/Enum/PackageStatus.php:31
+#: ./templates/Admin/Packages/index.php:64
+#: ./templates/Admin/Packages/view.php:14
+msgid "Ready for Pickup"
+msgstr ""
+
+#: ./src/Model/Enum/PackageStatus.php:32
+#: ./templates/Admin/Packages/index.php:65
+#: ./templates/Admin/Packages/index.php:67
+#: ./templates/Admin/Packages/view.php:15
+#: ./templates/Admin/Packages/view.php:17
+msgid "Delivered"
+msgstr ""
+
+#: ./src/Model/Enum/ShipRequestStatus.php:19
+msgid "Submitted"
+msgstr ""
+
+#: ./src/Model/Enum/ShipRequestStatus.php:20
+msgid "Processed"
+msgstr ""
+
+#: ./src/Model/Enum/UserRole.php:19
+msgid "Admin"
+msgstr ""
+
+#: ./src/Model/Enum/UserRole.php:20
+#: ./templates/Admin/Packages/view.php:29
+#: ./templates/Admin/ShipRequests/view.php:23
+#: ./templates/Client/Packages/view.php:23
+#: ./templates/Client/ShipRequests/view.php:21
+msgid "Client"
+msgstr ""
+
+#: ./src/Model/Enum/WeightUnit.php:18
+msgid "Pounds"
+msgstr ""
+
+#: ./src/Model/Table/PackagesShipRequestsTable.php:87
+msgid "This combination already exists."
+msgstr ""
+
+#: ./src/Model/Table/PackagesTable.php:329
+msgid "Package status cannot transition from {0} to {1}."
+msgstr ""
+
+#: ./src/Model/Table/PackagesTable.php:331
+msgid "new"
+msgstr ""
+
+#: ./src/Model/Table/ShipRequestsTable.php:201
+msgid "Select at least one package."
+msgstr ""
+
+#: ./src/Model/Table/ShipRequestsTable.php:214
+msgid "Only approved packages can be submitted."
+msgstr ""
+
+#: ./src/Model/Table/ShipRequestsTable.php:260
+msgid "Client submitted ship request."
+msgstr ""
+
+#: ./templates/Admin/Clients/add.php:11
+#: ./templates/Admin/Clients/edit.php:11
+#: ./templates/Admin/Clients/index.php:30
+#: ./templates/Admin/Clients/view.php:10
+#: ./templates/Admin/Clients/view.php:85
+#: ./templates/Admin/Clients/view.php:140
+#: ./templates/Admin/Invoices/index.php:25
+#: ./templates/Admin/Invoices/view.php:10
+#: ./templates/Admin/Packages/add.php:13
+#: ./templates/Admin/Packages/edit.php:13
+#: ./templates/Admin/Packages/index.php:37
+#: ./templates/Admin/Packages/view.php:10
+#: ./templates/Admin/Packages/view.php:124
+#: ./templates/Admin/ShipRequests/index.php:29
+#: ./templates/Admin/ShipRequests/view.php:10
+#: ./templates/Admin/ShipRequests/view.php:93
+#: ./templates/Admin/Users/add.php:10
+#: ./templates/Admin/Users/edit.php:10
+#: ./templates/Admin/Users/index.php:27
+#: ./templates/Admin/Users/view.php:10
+#: ./templates/Client/Invoices/index.php:24
+#: ./templates/Client/Invoices/view.php:10
+#: ./templates/Client/Packages/index.php:23
+#: ./templates/Client/Packages/upload_invoice.php:10
+#: ./templates/Client/Packages/view.php:10
+#: ./templates/Client/Packages/view.php:119
+#: ./templates/Client/Packages/view.php:152
+#: ./templates/Client/ShipRequests/add.php:11
+#: ./templates/Client/ShipRequests/index.php:25
+#: ./templates/Client/ShipRequests/view.php:10
+#: ./templates/Client/ShipRequests/view.php:82
+#: ./templates/Client/Shipments/index.php:24
+#: ./templates/Users/change_password.php:10
+#: ./templates/Users/edit.php:10
+#: ./templates/Users/profile.php:10
+msgid "Actions"
+msgstr ""
+
+#: ./templates/Admin/Clients/add.php:12
+#: ./templates/Admin/Clients/edit.php:17
+#: ./templates/Admin/Clients/view.php:13
+msgid "List Clients"
+msgstr ""
+
+#: ./templates/Admin/Clients/add.php:19
+msgid "Add Client"
+msgstr ""
+
+#: ./templates/Admin/Clients/add.php:30
+#: ./templates/Admin/Clients/edit.php:35
+#: ./templates/Admin/Packages/add.php:35
+#: ./templates/Admin/Packages/edit.php:40
+#: ./templates/Admin/Users/add.php:28
+#: ./templates/Admin/Users/edit.php:33
+#: ./templates/Client/ShipRequests/add.php:32
+#: ./templates/Users/change_password.php:24
+#: ./templates/Users/edit.php:23
+msgid "Submit"
+msgstr ""
+
+#: ./templates/Admin/Clients/edit.php:13
+#: ./templates/Admin/Clients/index.php:51
+#: ./templates/Admin/Clients/view.php:110
+#: ./templates/Admin/Packages/edit.php:15
+#: ./templates/Admin/Packages/index.php:70
+#: ./templates/Admin/Users/edit.php:12
+#: ./templates/Admin/Users/index.php:45
+msgid "Delete"
+msgstr ""
+
+#: ./templates/Admin/Clients/edit.php:15
+#: ./templates/Admin/Clients/index.php:55
+#: ./templates/Admin/Clients/view.php:12
+#: ./templates/Admin/Clients/view.php:114
+#: ./templates/Admin/Packages/edit.php:17
+#: ./templates/Admin/Packages/index.php:74
+#: ./templates/Admin/Packages/view.php:19
+#: ./templates/Admin/Users/edit.php:14
+#: ./templates/Admin/Users/index.php:49
+#: ./templates/Admin/Users/view.php:12
+msgid "Are you sure you want to delete record #{0}?"
+msgstr ""
+
+#: ./templates/Admin/Clients/edit.php:24
+#: ./templates/Admin/Clients/view.php:11
+msgid "Edit Client"
+msgstr ""
+
+#: ./templates/Admin/Clients/index.php:9
+#: ./templates/Admin/Clients/view.php:14
+msgid "New Client"
+msgstr ""
+
+#: ./templates/Admin/Clients/index.php:10
+#: ./templates/Admin/Dashboard/index.php:15
+#: ./templates/layout/default.php:46
+msgid "Clients"
+msgstr ""
+
+#: ./templates/Admin/Clients/index.php:13
+msgid "Search suite, client, email, phone, address, city, or country"
+msgstr ""
+
+#: ./templates/Admin/Clients/index.php:22
+#: ./templates/Admin/Packages/index.php:11
+#: ./templates/element/pdf/ship_request_manifest.php:39
+#: ./templates/layout/default.php:47
+#: ./templates/layout/default.php:55
+msgid "Packages"
+msgstr ""
+
+#: ./templates/Admin/Clients/index.php:48
+#: ./templates/Admin/Clients/view.php:107
+#: ./templates/Admin/Clients/view.php:155
+#: ./templates/Admin/Invoices/index.php:39
+#: ./templates/Admin/Packages/index.php:61
+#: ./templates/Admin/Packages/view.php:141
+#: ./templates/Admin/ShipRequests/index.php:46
+#: ./templates/Admin/ShipRequests/view.php:117
+#: ./templates/Admin/Users/index.php:42
+#: ./templates/Client/Invoices/index.php:37
+#: ./templates/Client/Packages/index.php:34
+#: ./templates/Client/Packages/view.php:131
+#: ./templates/Client/ShipRequests/index.php:37
+#: ./templates/Client/ShipRequests/view.php:97
+#: ./templates/Client/Shipments/index.php:36
+msgid "View"
+msgstr ""
+
+#: ./templates/Admin/Clients/index.php:49
+#: ./templates/Admin/Clients/view.php:108
+#: ./templates/Admin/Packages/index.php:62
+#: ./templates/Admin/Users/index.php:43
+msgid "Edit"
+msgstr ""
+
+#: ./templates/Admin/Clients/index.php:66
+#: ./templates/Admin/Invoices/index.php:51
+#: ./templates/Admin/Packages/index.php:85
+#: ./templates/Admin/ShipRequests/index.php:58
+#: ./templates/Admin/Users/index.php:60
+#: ./templates/Client/Invoices/index.php:47
+#: ./templates/Client/Packages/index.php:46
+#: ./templates/Client/ShipRequests/index.php:46
+#: ./templates/Client/Shipments/index.php:50
+msgid "First"
+msgstr ""
+
+#: ./templates/Admin/Clients/index.php:67
+#: ./templates/Admin/Invoices/index.php:52
+#: ./templates/Admin/Packages/index.php:86
+#: ./templates/Admin/ShipRequests/index.php:59
+#: ./templates/Admin/Users/index.php:61
+#: ./templates/Client/Invoices/index.php:48
+#: ./templates/Client/Packages/index.php:47
+#: ./templates/Client/ShipRequests/index.php:47
+#: ./templates/Client/Shipments/index.php:51
+msgid "Previous"
+msgstr ""
+
+#: ./templates/Admin/Clients/index.php:69
+#: ./templates/Admin/Invoices/index.php:54
+#: ./templates/Admin/Packages/index.php:88
+#: ./templates/Admin/ShipRequests/index.php:61
+#: ./templates/Admin/Users/index.php:63
+#: ./templates/Client/Invoices/index.php:50
+#: ./templates/Client/Packages/index.php:49
+#: ./templates/Client/ShipRequests/index.php:49
+#: ./templates/Client/Shipments/index.php:53
+msgid "Next"
+msgstr ""
+
+#: ./templates/Admin/Clients/index.php:70
+#: ./templates/Admin/Invoices/index.php:55
+#: ./templates/Admin/Packages/index.php:89
+#: ./templates/Admin/ShipRequests/index.php:62
+#: ./templates/Admin/Users/index.php:64
+#: ./templates/Client/Invoices/index.php:51
+#: ./templates/Client/Packages/index.php:50
+#: ./templates/Client/ShipRequests/index.php:50
+#: ./templates/Client/Shipments/index.php:54
+msgid "Last"
+msgstr ""
+
+#: ./templates/Admin/Clients/index.php:72
+#: ./templates/Admin/Invoices/index.php:57
+#: ./templates/Admin/Packages/index.php:91
+#: ./templates/Admin/ShipRequests/index.php:64
+#: ./templates/Admin/Users/index.php:66
+#: ./templates/Client/Invoices/index.php:53
+#: ./templates/Client/Packages/index.php:52
+#: ./templates/Client/ShipRequests/index.php:52
+#: ./templates/Client/Shipments/index.php:56
+msgid "Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} total"
+msgstr ""
+
+#: ./templates/Admin/Clients/view.php:12
+msgid "Delete Client"
+msgstr ""
+
+#: ./templates/Admin/Clients/view.php:22
+msgid "User"
+msgstr ""
+
+#: ./templates/Admin/Clients/view.php:26
+#: ./templates/Users/profile.php:33
+msgid "Suite Number"
+msgstr ""
+
+#: ./templates/Admin/Clients/view.php:30
+msgid "Phone"
+msgstr ""
+
+#: ./templates/Admin/Clients/view.php:34
+msgid "Address Line 1"
+msgstr ""
+
+#: ./templates/Admin/Clients/view.php:38
+msgid "Address Line 2"
+msgstr ""
+
+#: ./templates/Admin/Clients/view.php:42
+msgid "City"
+msgstr ""
+
+#: ./templates/Admin/Clients/view.php:46
+msgid "Country"
+msgstr ""
+
+#: ./templates/Admin/Clients/view.php:50
+#: ./templates/Admin/Clients/view.php:68
+#: ./templates/Admin/Clients/view.php:130
+#: ./templates/Admin/Invoices/view.php:46
+#: ./templates/Admin/Packages/view.php:53
+#: ./templates/Admin/Packages/view.php:113
+#: ./templates/Admin/Packages/view.php:155
+#: ./templates/Admin/ShipRequests/view.php:39
+#: ./templates/Admin/ShipRequests/view.php:75
+#: ./templates/Admin/Users/view.php:30
+#: ./templates/Client/Invoices/view.php:40
+#: ./templates/Client/Packages/view.php:47
+#: ./templates/Client/Packages/view.php:113
+#: ./templates/Client/Packages/view.php:145
+#: ./templates/Client/ShipRequests/view.php:37
+msgid "ID"
+msgstr ""
+
+#: ./templates/Admin/Clients/view.php:54
+#: ./templates/Admin/Clients/view.php:83
+#: ./templates/Admin/Clients/view.php:138
+#: ./templates/Admin/Invoices/view.php:66
+#: ./templates/Admin/Packages/view.php:93
+#: ./templates/Admin/Packages/view.php:122
+#: ./templates/Admin/Packages/view.php:161
+#: ./templates/Admin/ShipRequests/view.php:55
+#: ./templates/Admin/ShipRequests/view.php:91
+#: ./templates/Admin/Users/view.php:42
+#: ./templates/Client/Invoices/view.php:60
+#: ./templates/Client/Packages/view.php:87
+#: ./templates/Client/Packages/view.php:151
+#: ./templates/Client/ShipRequests/view.php:53
+msgid "Created"
+msgstr ""
+
+#: ./templates/Admin/Clients/view.php:58
+#: ./templates/Admin/Clients/view.php:84
+#: ./templates/Admin/Clients/view.php:139
+#: ./templates/Admin/Invoices/view.php:70
+#: ./templates/Admin/Packages/view.php:97
+#: ./templates/Admin/Packages/view.php:123
+#: ./templates/Admin/ShipRequests/view.php:59
+#: ./templates/Admin/ShipRequests/view.php:92
+#: ./templates/Admin/Users/view.php:46
+#: ./templates/Client/Invoices/view.php:64
+#: ./templates/Client/Packages/view.php:91
+#: ./templates/Client/ShipRequests/view.php:57
+msgid "Modified"
+msgstr ""
+
+#: ./templates/Admin/Clients/view.php:63
+#: ./templates/Admin/ShipRequests/view.php:70
+#: ./templates/Client/ShipRequests/view.php:68
+msgid "Related Packages"
+msgstr ""
+
+#: ./templates/Admin/Clients/view.php:69
+#: ./templates/Admin/Packages/view.php:33
+#: ./templates/Admin/ShipRequests/view.php:77
+#: ./templates/Client/Packages/view.php:27
+#: ./templates/Client/ShipRequests/view.php:73
+#: ./templates/element/pdf/package_document.php:13
+#: ./templates/element/pdf/ship_request_manifest.php:42
+msgid "Tracking Number"
+msgstr ""
+
+#: ./templates/Admin/Clients/view.php:70
+#: ./templates/Admin/Packages/view.php:57
+#: ./templates/Admin/ShipRequests/view.php:78
+#: ./templates/Client/Packages/view.php:51
+msgid "Width"
+msgstr ""
+
+#: ./templates/Admin/Clients/view.php:71
+#: ./templates/Admin/Packages/view.php:61
+#: ./templates/Admin/ShipRequests/view.php:79
+#: ./templates/Client/Packages/view.php:55
+msgid "Height"
+msgstr ""
+
+#: ./templates/Admin/Clients/view.php:72
+#: ./templates/Admin/Packages/view.php:65
+#: ./templates/Admin/ShipRequests/view.php:80
+#: ./templates/Client/Packages/view.php:59
+msgid "Length"
+msgstr ""
+
+#: ./templates/Admin/Clients/view.php:73
+#: ./templates/Admin/Packages/view.php:69
+#: ./templates/Admin/ShipRequests/view.php:81
+#: ./templates/Client/Packages/view.php:63
+#: ./templates/Client/ShipRequests/view.php:74
+#: ./templates/element/pdf/package_document.php:25
+#: ./templates/element/pdf/ship_request_manifest.php:44
+msgid "Weight"
+msgstr ""
+
+#: ./templates/Admin/Clients/view.php:74
+#: ./templates/Admin/Packages/view.php:37
+#: ./templates/Admin/ShipRequests/view.php:82
+#: ./templates/Client/Packages/view.php:31
+msgid "Dimension Unit"
+msgstr ""
+
+#: ./templates/Admin/Clients/view.php:75
+#: ./templates/Admin/Packages/view.php:41
+#: ./templates/Admin/ShipRequests/view.php:83
+#: ./templates/Client/Packages/view.php:35
+#: ./templates/Client/ShipRequests/view.php:75
+msgid "Weight Unit"
+msgstr ""
+
+#: ./templates/Admin/Clients/view.php:76
+#: ./templates/Admin/Packages/view.php:102
+#: ./templates/Admin/ShipRequests/view.php:84
+#: ./templates/Client/Packages/view.php:96
+#: ./templates/Client/ShipRequests/view.php:76
+#: ./templates/element/pdf/package_document.php:55
+#: ./templates/element/pdf/ship_request_manifest.php:45
+msgid "Contents"
+msgstr ""
+
+#: ./templates/Admin/Clients/view.php:77
+#: ./templates/Admin/Clients/view.php:133
+#: ./templates/Admin/Dashboard/index.php:30
+#: ./templates/Admin/Packages/view.php:73
+#: ./templates/Admin/Packages/view.php:117
+#: ./templates/Admin/ShipRequests/view.php:43
+#: ./templates/Admin/ShipRequests/view.php:85
+#: ./templates/Client/Packages/view.php:67
+#: ./templates/Client/Packages/view.php:114
+#: ./templates/Client/ShipRequests/view.php:41
+#: ./templates/Client/ShipRequests/view.php:77
+#: ./templates/element/pdf/package_document.php:21
+#: ./templates/element/pdf/ship_request_manifest.php:17
+#: ./templates/element/pdf/ship_request_manifest.php:43
+msgid "Status"
+msgstr ""
+
+#: ./templates/Admin/Clients/view.php:78
+#: ./templates/Admin/Packages/view.php:77
+#: ./templates/Admin/ShipRequests/view.php:86
+#: ./templates/Client/Packages/view.php:71
+#: ./templates/Client/ShipRequests/view.php:78
+#: ./templates/element/pdf/package_document.php:38
+msgid "Received At"
+msgstr ""
+
+#: ./templates/Admin/Clients/view.php:79
+#: ./templates/Admin/Packages/view.php:81
+#: ./templates/Admin/ShipRequests/view.php:87
+#: ./templates/Client/Packages/view.php:75
+#: ./templates/Client/ShipRequests/view.php:79
+#: ./templates/element/pdf/package_document.php:42
+msgid "Shipped At"
+msgstr ""
+
+#: ./templates/Admin/Clients/view.php:80
+#: ./templates/Admin/Packages/view.php:85
+#: ./templates/Admin/ShipRequests/view.php:88
+#: ./templates/Client/Packages/view.php:79
+#: ./templates/Client/ShipRequests/view.php:80
+#: ./templates/element/pdf/package_document.php:46
+msgid "Ready for Pickup At"
+msgstr ""
+
+#: ./templates/Admin/Clients/view.php:81
+#: ./templates/Admin/Packages/view.php:89
+#: ./templates/Admin/ShipRequests/view.php:89
+#: ./templates/Client/Packages/view.php:83
+#: ./templates/Client/ShipRequests/view.php:81
+#: ./templates/element/pdf/package_document.php:50
+msgid "Delivered At"
+msgstr ""
+
+#: ./templates/Admin/Clients/view.php:82
+#: ./templates/Admin/ShipRequests/view.php:90
+msgid "Created By User ID"
+msgstr ""
+
+#: ./templates/Admin/Clients/view.php:125
+#: ./templates/Admin/Packages/view.php:108
+#: ./templates/Client/Packages/view.php:108
+msgid "Related Ship Requests"
+msgstr ""
+
+#: ./templates/Admin/Clients/view.php:131
+#: ./templates/Admin/Packages/view.php:115
+msgid "Submitted By User ID"
+msgstr ""
+
+#: ./templates/Admin/Clients/view.php:132
+#: ./templates/Admin/Packages/view.php:116
+msgid "Processed By User ID"
+msgstr ""
+
+#: ./templates/Admin/Clients/view.php:134
+#: ./templates/Admin/Packages/view.php:118
+#: ./templates/Admin/ShipRequests/view.php:35
+#: ./templates/Client/Packages/view.php:115
+#: ./templates/Client/ShipRequests/view.php:33
+#: ./templates/element/pdf/ship_request_manifest.php:21
+msgid "Processing Reference"
+msgstr ""
+
+#: ./templates/Admin/Clients/view.php:135
+#: ./templates/Admin/Packages/view.php:119
+#: ./templates/Admin/ShipRequests/view.php:47
+#: ./templates/Client/Packages/view.php:116
+#: ./templates/Client/ShipRequests/view.php:45
+#: ./templates/element/pdf/ship_request_manifest.php:25
+msgid "Submitted At"
+msgstr ""
+
+#: ./templates/Admin/Clients/view.php:136
+#: ./templates/Admin/Packages/view.php:120
+#: ./templates/Admin/ShipRequests/view.php:51
+#: ./templates/Client/Packages/view.php:117
+#: ./templates/Client/ShipRequests/view.php:49
+#: ./templates/element/pdf/ship_request_manifest.php:29
+msgid "Processed At"
+msgstr ""
+
+#: ./templates/Admin/Clients/view.php:137
+#: ./templates/Admin/Packages/view.php:121
+#: ./templates/Admin/ShipRequests/view.php:64
+#: ./templates/Client/Packages/view.php:118
+#: ./templates/Client/ShipRequests/view.php:62
+#: ./templates/element/pdf/ship_request_manifest.php:35
+msgid "Notes"
+msgstr ""
+
+#: ./templates/Admin/Dashboard/index.php:10
+msgid "Admin Dashboard"
+msgstr ""
+
+#: ./templates/Admin/Dashboard/index.php:19
+msgid "Pending Invoice Reviews"
+msgstr ""
+
+#: ./templates/Admin/Dashboard/index.php:25
+msgid "Packages by Status"
+msgstr ""
+
+#: ./templates/Admin/Dashboard/index.php:31
+#: ./templates/Client/Dashboard/index.php:15
+msgid "Count"
+msgstr ""
+
+#: ./templates/Admin/Invoices/index.php:9
+msgid "Invoice Review"
+msgstr ""
+
+#: ./templates/Admin/Invoices/index.php:12
+msgid "Search file, tracking number, uploader, reviewer, notes, or status"
+msgstr ""
+
+#: ./templates/Admin/Invoices/index.php:40
+#: ./templates/Admin/Invoices/view.php:12
+msgid "Open File"
+msgstr ""
+
+#: ./templates/Admin/Invoices/index.php:41
+#: ./templates/Client/Invoices/index.php:38
+msgid "Download"
+msgstr ""
+
+#: ./templates/Admin/Invoices/index.php:42
+#: ./templates/Admin/Invoices/view.php:14
+msgid "Approve"
+msgstr ""
+
+#: ./templates/Admin/Invoices/view.php:11
+msgid "Review Queue"
+msgstr ""
+
+#: ./templates/Admin/Invoices/view.php:13
+#: ./templates/Client/Invoices/view.php:12
+msgid "Download File"
+msgstr ""
+
+#: ./templates/Admin/Invoices/view.php:22
+#: ./templates/Client/Invoices/view.php:20
+#: ./templates/element/pdf/package_document.php:10
+msgid "Package"
+msgstr ""
+
+#: ./templates/Admin/Invoices/view.php:26
+#: ./templates/Client/Invoices/view.php:24
+msgid "Uploaded By"
+msgstr ""
+
+#: ./templates/Admin/Invoices/view.php:30
+#: ./templates/Client/Invoices/view.php:28
+msgid "Reviewed By"
+msgstr ""
+
+#: ./templates/Admin/Invoices/view.php:34
+msgid "File Path"
+msgstr ""
+
+#: ./templates/Admin/Invoices/view.php:38
+#: ./templates/Client/Invoices/view.php:32
+#: ./templates/element/pdf/package_document.php:62
+msgid "Original File Name"
+msgstr ""
+
+#: ./templates/Admin/Invoices/view.php:42
+#: ./templates/Client/Invoices/view.php:36
+msgid "MIME Type"
+msgstr ""
+
+#: ./templates/Admin/Invoices/view.php:50
+#: ./templates/Client/Invoices/view.php:44
+msgid "File Size"
+msgstr ""
+
+#: ./templates/Admin/Invoices/view.php:54
+#: ./templates/Client/Invoices/view.php:48
+#: ./templates/element/pdf/package_document.php:66
+msgid "Review Status"
+msgstr ""
+
+#: ./templates/Admin/Invoices/view.php:58
+#: ./templates/Client/Invoices/view.php:52
+#: ./templates/element/pdf/package_document.php:70
+msgid "Uploaded At"
+msgstr ""
+
+#: ./templates/Admin/Invoices/view.php:62
+#: ./templates/Client/Invoices/view.php:56
+#: ./templates/element/pdf/package_document.php:74
+msgid "Reviewed At"
+msgstr ""
+
+#: ./templates/Admin/Invoices/view.php:75
+#: ./templates/Client/Invoices/view.php:69
+msgid "Admin Notes"
+msgstr ""
+
+#: ./templates/Admin/Invoices/view.php:82
+msgid "Flag as Needs Review"
+msgstr ""
+
+#: ./templates/Admin/Invoices/view.php:85
+msgid "Flag"
+msgstr ""
+
+#: ./templates/Admin/Packages/add.php:14
+#: ./templates/Admin/Packages/edit.php:19
+#: ./templates/Admin/Packages/view.php:20
+msgid "List Packages"
+msgstr ""
+
+#: ./templates/Admin/Packages/add.php:21
+msgid "Add Package"
+msgstr ""
+
+#: ./templates/Admin/Packages/edit.php:26
+#: ./templates/Admin/Packages/view.php:12
+msgid "Edit Package"
+msgstr ""
+
+#: ./templates/Admin/Packages/index.php:9
+#: ./templates/Admin/Packages/view.php:21
+msgid "New Package"
+msgstr ""
+
+#: ./templates/Admin/Packages/index.php:10
+#: ./templates/Admin/ShipRequests/index.php:9
+#: ./templates/Client/Packages/index.php:9
+#: ./templates/Client/ShipRequests/index.php:10
+msgid "Export CSV"
+msgstr ""
+
+#: ./templates/Admin/Packages/index.php:14
+msgid "Search tracking, client, email, contents, or status"
+msgstr ""
+
+#: ./templates/Admin/Packages/view.php:11
+#: ./templates/Client/Packages/view.php:12
+msgid "Download PDF"
+msgstr ""
+
+#: ./templates/Admin/Packages/view.php:19
+msgid "Delete Package"
+msgstr ""
+
+#: ./templates/Admin/Packages/view.php:45
+#: ./templates/Client/Packages/view.php:39
+msgid "Created By"
+msgstr ""
+
+#: ./templates/Admin/Packages/view.php:49
+#: ./templates/Client/Packages/view.php:43
+#: ./templates/element/pdf/package_document.php:59
+msgid "Invoice"
+msgstr ""
+
+#: ./templates/Admin/Packages/view.php:114
+#: ./templates/Admin/ShipRequests/view.php:76
+msgid "Client ID"
+msgstr ""
+
+#: ./templates/Admin/Packages/view.php:150
+#: ./templates/Client/Packages/view.php:140
+msgid "Related Package Status Histories"
+msgstr ""
+
+#: ./templates/Admin/Packages/view.php:156
+#: ./templates/Client/Packages/view.php:146
+msgid "Changed By User ID"
+msgstr ""
+
+#: ./templates/Admin/Packages/view.php:157
+#: ./templates/Client/Packages/view.php:147
+msgid "Changed By Role"
+msgstr ""
+
+#: ./templates/Admin/Packages/view.php:158
+#: ./templates/Client/Packages/view.php:148
+msgid "Old Status"
+msgstr ""
+
+#: ./templates/Admin/Packages/view.php:159
+#: ./templates/Client/Packages/view.php:149
+msgid "New Status"
+msgstr ""
+
+#: ./templates/Admin/Packages/view.php:160
+#: ./templates/Client/Packages/view.php:150
+msgid "Note"
+msgstr ""
+
+#: ./templates/Admin/ShipRequests/index.php:10
+#: ./templates/Client/ShipRequests/index.php:11
+#: ./templates/layout/default.php:49
+#: ./templates/layout/default.php:57
+msgid "Ship Requests"
+msgstr ""
+
+#: ./templates/Admin/ShipRequests/index.php:13
+msgid "Search request id, suite, client, processor, reference, notes, or status"
+msgstr ""
+
+#: ./templates/Admin/ShipRequests/index.php:48
+#: ./templates/Admin/ShipRequests/view.php:14
+msgid "Mark Shipped"
+msgstr ""
+
+#: ./templates/Admin/ShipRequests/view.php:11
+#: ./templates/Client/ShipRequests/view.php:11
+msgid "List Ship Requests"
+msgstr ""
+
+#: ./templates/Admin/ShipRequests/view.php:12
+#: ./templates/Client/ShipRequests/view.php:12
+msgid "Download Manifest PDF"
+msgstr ""
+
+#: ./templates/Admin/ShipRequests/view.php:27
+#: ./templates/Client/ShipRequests/view.php:25
+msgid "Submitted By User"
+msgstr ""
+
+#: ./templates/Admin/ShipRequests/view.php:31
+#: ./templates/Client/ShipRequests/view.php:29
+msgid "Processed By User"
+msgstr ""
+
+#: ./templates/Admin/Users/add.php:11
+#: ./templates/Admin/Users/edit.php:16
+#: ./templates/Admin/Users/view.php:13
+msgid "List Users"
+msgstr ""
+
+#: ./templates/Admin/Users/add.php:18
+msgid "Add User"
+msgstr ""
+
+#: ./templates/Admin/Users/edit.php:23
+#: ./templates/Admin/Users/view.php:11
+msgid "Edit User"
+msgstr ""
+
+#: ./templates/Admin/Users/index.php:9
+#: ./templates/Admin/Users/view.php:14
+msgid "New User"
+msgstr ""
+
+#: ./templates/Admin/Users/index.php:10
+#: ./templates/layout/default.php:45
+msgid "Users"
+msgstr ""
+
+#: ./templates/Admin/Users/index.php:13
+msgid "Search name, email, role, or suite number"
+msgstr ""
+
+#: ./templates/Admin/Users/view.php:12
+msgid "Delete User"
+msgstr ""
+
+#: ./templates/Admin/Users/view.php:22
+#: ./templates/Users/profile.php:20
+msgid "Name"
+msgstr ""
+
+#: ./templates/Admin/Users/view.php:26
+#: ./templates/Users/profile.php:24
+msgid "Email"
+msgstr ""
+
+#: ./templates/Admin/Users/view.php:34
+#: ./templates/Users/profile.php:28
+msgid "Role"
+msgstr ""
+
+#: ./templates/Admin/Users/view.php:38
+#: ./templates/Users/profile.php:38
+msgid "Last Login"
+msgstr ""
+
+#: ./templates/Admin/Users/view.php:50
+msgid "Active"
+msgstr ""
+
+#: ./templates/Admin/Users/view.php:51
+msgid "Yes"
+msgstr ""
+
+#: ./templates/Admin/Users/view.php:51
+msgid "No"
+msgstr ""
+
+#: ./templates/Client/Dashboard/index.php:8
+#: ./templates/layout/default.php:44
+#: ./templates/layout/default.php:54
+msgid "Dashboard"
+msgstr ""
+
+#: ./templates/Client/Dashboard/index.php:14
+msgid "Package Status"
+msgstr ""
+
+#: ./templates/Client/Invoices/index.php:9
+#: ./templates/layout/default.php:48
+#: ./templates/layout/default.php:56
+msgid "Invoices"
+msgstr ""
+
+#: ./templates/Client/Invoices/index.php:12
+msgid "Search file, tracking number, notes, or status"
+msgstr ""
+
+#: ./templates/Client/Invoices/view.php:11
+msgid "List Invoices"
+msgstr ""
+
+#: ./templates/Client/Packages/index.php:10
+#: ./templates/Client/Packages/upload_invoice.php:12
+#: ./templates/Client/Packages/view.php:11
+msgid "My Packages"
+msgstr ""
+
+#: ./templates/Client/Packages/index.php:13
+#: ./templates/Client/Shipments/index.php:12
+msgid "Search tracking number, contents, or status"
+msgstr ""
+
+#: ./templates/Client/Packages/index.php:36
+#: ./templates/Client/Packages/upload_invoice.php:23
+#: ./templates/Client/Packages/view.php:14
+msgid "Upload Invoice"
+msgstr ""
+
+#: ./templates/Client/Packages/upload_invoice.php:11
+msgid "Back to Package"
+msgstr ""
+
+#: ./templates/Client/Packages/upload_invoice.php:26
+msgid "Invoice File"
+msgstr ""
+
+#: ./templates/Client/Packages/upload_invoice.php:31
+msgid "Upload"
+msgstr ""
+
+#: ./templates/Client/Packages/view.php:103
+#: ./templates/element/pdf/package_document.php:79
+msgid "Invoice Review Note"
+msgstr ""
+
+#: ./templates/Client/ShipRequests/add.php:12
+msgid "My Ship Requests"
+msgstr ""
+
+#: ./templates/Client/ShipRequests/add.php:19
+msgid "Create Ship Request"
+msgstr ""
+
+#: ./templates/Client/ShipRequests/add.php:29
+msgid "No approved packages are available for shipment."
+msgstr ""
+
+#: ./templates/Client/ShipRequests/index.php:9
+#: ./templates/Client/ShipRequests/view.php:13
+msgid "New Ship Request"
+msgstr ""
+
+#: ./templates/Client/ShipRequests/index.php:14
+msgid "Search request id, reference, notes, or status"
+msgstr ""
+
+#: ./templates/Client/Shipments/index.php:9
+msgid "Shipment Status"
+msgstr ""
+
+#: ./templates/Pages/home.php:9
+#: ./templates/Pages/home.php:11
+#: ./templates/Users/login.php:11
+#: ./templates/Users/login.php:15
+#: ./templates/layout/default.php:63
+msgid "Login"
+msgstr ""
+
+#: ./templates/Pages/home.php:10
+msgid "Continue to the ParcelBridge login page."
+msgstr ""
+
+#: ./templates/Users/change_password.php:11
+#: ./templates/Users/edit.php:11
+#: ./templates/layout/default.php:50
+#: ./templates/layout/default.php:59
+msgid "My Account"
+msgstr ""
+
+#: ./templates/Users/change_password.php:12
+#: ./templates/Users/edit.php:19
+#: ./templates/Users/profile.php:11
+msgid "Edit Account"
+msgstr ""
+
+#: ./templates/Users/change_password.php:19
+#: ./templates/Users/edit.php:12
+#: ./templates/Users/profile.php:12
+#: ./templates/layout/default.php:51
+#: ./templates/layout/default.php:60
+msgid "Change Password"
+msgstr ""
+
+#: ./templates/Users/forgot_password.php:11
+msgid "Forgot Password"
+msgstr ""
+
+#: ./templates/Users/forgot_password.php:14
+msgid "Send Reset Link"
+msgstr ""
+
+#: ./templates/Users/login.php:17
+msgid "Forgot password?"
+msgstr ""
+
+#: ./templates/Users/reset_password.php:12
+#: ./templates/Users/reset_password.php:16
+msgid "Reset Password"
+msgstr ""
+
+#: ./templates/element/index_search.php:18
+msgid "Search"
+msgstr ""
+
+#: ./templates/element/index_search.php:19
+msgid "Reset"
+msgstr ""
+
+#: ./templates/element/pdf/package_document.php:7
+msgid "Package Document"
+msgstr ""
+
+#: ./templates/element/pdf/package_document.php:8
+#: ./templates/element/pdf/ship_request_manifest.php:8
+msgid "Generated by ParcelBridge"
+msgstr ""
+
+#: ./templates/element/pdf/package_document.php:17
+#: ./templates/element/pdf/ship_request_manifest.php:13
+msgid "Client Suite"
+msgstr ""
+
+#: ./templates/element/pdf/package_document.php:29
+msgid "Dimensions"
+msgstr ""
+
+#: ./templates/element/pdf/ship_request_manifest.php:7
+msgid "Ship Request Manifest"
+msgstr ""
+
+#: ./templates/element/pdf/ship_request_manifest.php:10
+msgid "Ship Request"
+msgstr ""
+
+#: ./templates/layout/default.php:52
+#: ./templates/layout/default.php:61
+msgid "Logout"
+msgstr ""
+
+#: ./templates/layout/default.php:58
+msgid "Shipments"
+msgstr ""
+
+#: ./templates/layout/error.php:36
+msgid "Back"
+msgstr ""
+
