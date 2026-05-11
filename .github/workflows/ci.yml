@@ -3,9 +3,7 @@ name: CI
 on:
   push:
     branches:
-      - '5.x'
-      - '5.next'
-      - '6.x'
+      - master
   pull_request:
     branches:
       - '*'
@@ -21,15 +19,13 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - php-version: '8.2'
+          - php-version: '8.3'
             dependencies: 'lowest'
-          - php-version: '8.5'
-            dependencies: 'highest'
-          - php-version: '8.5'
+          - php-version: '8.4'
             dependencies: 'highest'
 
     steps:
-    - uses: actions/checkout@v6
+    - uses: actions/checkout@v4
 
     - name: Setup PHP
       uses: shivammathur/setup-php@v2
@@ -58,12 +54,12 @@ jobs:
     runs-on: ubuntu-24.04
 
     steps:
-    - uses: actions/checkout@v6
+    - uses: actions/checkout@v4
 
     - name: Setup PHP
       uses: shivammathur/setup-php@v2
       with:
-        php-version: '8.2'
+        php-version: '8.3'
         extensions: mbstring, intl
         coverage: none
         tools: cs2pr, phpstan:1.12
