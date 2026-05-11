@@ -62,7 +62,7 @@ jobs:
         php-version: '8.3'
         extensions: mbstring, intl
         coverage: none
-        tools: cs2pr, phpstan:1.12
+        tools: cs2pr
 
     - name: Composer install
       uses: ramsey/composer-install@v4
@@ -72,6 +72,6 @@ jobs:
 
     - name: Run phpstan
       if: always()
-      run: phpstan
+      run: vendor/bin/phpstan
       env:
         SECURITY_SALT: f76f1c8475585c46c6acd3ddcb8f5e0f15de524637bb4080a08c4afe7cfc9144
