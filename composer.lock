@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "73ec1ab472cdfcecfaa577c05b8b2dd8",
+    "content-hash": "d087566c37e483d66e7a4bf341ab931e",
     "packages": [
         {
             "name": "cakephp/authentication",
@@ -2259,16 +2259,16 @@
         },
         {
             "name": "cakedc/cakephp-phpstan",
-            "version": "4.1.1",
+            "version": "4.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/CakeDC/cakephp-phpstan.git",
-                "reference": "4159d1c63ec5ea454835c66440d7f06a13b135a1"
+                "reference": "31832e9027842e6768295e686adb363dd13a7f0e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/CakeDC/cakephp-phpstan/zipball/4159d1c63ec5ea454835c66440d7f06a13b135a1",
-                "reference": "4159d1c63ec5ea454835c66440d7f06a13b135a1",
+                "url": "https://api.github.com/repos/CakeDC/cakephp-phpstan/zipball/31832e9027842e6768295e686adb363dd13a7f0e",
+                "reference": "31832e9027842e6768295e686adb363dd13a7f0e",
                 "shasum": ""
             },
             "require": {
@@ -2310,9 +2310,9 @@
             "description": "CakePHP plugin extension for PHPStan.",
             "support": {
                 "issues": "https://github.com/CakeDC/cakephp-phpstan/issues",
-                "source": "https://github.com/CakeDC/cakephp-phpstan/tree/4.1.1"
+                "source": "https://github.com/CakeDC/cakephp-phpstan/tree/4.2.0"
             },
-            "time": "2025-11-13T13:34:51+00:00"
+            "time": "2026-04-10T08:05:28+00:00"
         },
         {
             "name": "cakephp/bake",
