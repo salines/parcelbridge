@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "73ec1ab472cdfcecfaa577c05b8b2dd8",
+    "content-hash": "74abf2ea4addfb68917d6e228b1f9a52",
     "packages": [
         {
             "name": "cakephp/authentication",
@@ -707,16 +707,16 @@
         },
         {
             "name": "friendsofcake/cakephp-csvview",
-            "version": "5.0.1",
+            "version": "5.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfCake/cakephp-csvview.git",
-                "reference": "0c4d7332b56f80fa659865ea3b0601a8348b1c0e"
+                "reference": "03202e366b1045fc04859cdecaf59b20ae1610de"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfCake/cakephp-csvview/zipball/0c4d7332b56f80fa659865ea3b0601a8348b1c0e",
-                "reference": "0c4d7332b56f80fa659865ea3b0601a8348b1c0e",
+                "url": "https://api.github.com/repos/FriendsOfCake/cakephp-csvview/zipball/03202e366b1045fc04859cdecaf59b20ae1610de",
+                "reference": "03202e366b1045fc04859cdecaf59b20ae1610de",
                 "shasum": ""
             },
             "require": {
@@ -781,7 +781,7 @@
                 "issues": "https://github.com/friendsofcake/cakephp-csvview/issues",
                 "source": "https://github.com/friendsofcake/cakephp-csvview"
             },
-            "time": "2025-04-23T16:33:04+00:00"
+            "time": "2026-05-12T09:25:52+00:00"
         },
         {
             "name": "friendsofcake/search",
