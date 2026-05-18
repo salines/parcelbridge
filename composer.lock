@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "73ec1ab472cdfcecfaa577c05b8b2dd8",
+    "content-hash": "74abf2ea4addfb68917d6e228b1f9a52",
     "packages": [
         {
             "name": "cakephp/authentication",
@@ -3199,16 +3199,16 @@
         },
         {
             "name": "dereuromark/cakephp-ide-helper",
-            "version": "2.17.0",
+            "version": "2.18.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dereuromark/cakephp-ide-helper.git",
-                "reference": "4843ca06d1a4c401d0fea49cacfcf6fdc3138196"
+                "reference": "7844407e84ae72dd959e1c8264a64ed4426e6c40"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dereuromark/cakephp-ide-helper/zipball/4843ca06d1a4c401d0fea49cacfcf6fdc3138196",
-                "reference": "4843ca06d1a4c401d0fea49cacfcf6fdc3138196",
+                "url": "https://api.github.com/repos/dereuromark/cakephp-ide-helper/zipball/7844407e84ae72dd959e1c8264a64ed4426e6c40",
+                "reference": "7844407e84ae72dd959e1c8264a64ed4426e6c40",
                 "shasum": ""
             },
             "require": {
@@ -3252,7 +3252,7 @@
                 }
             ],
             "description": "CakePHP IdeHelper Plugin to improve auto-completion",
-            "homepage": "https://github.com/dereuromark/cakephp-ide-helper/",
+            "homepage": "https://dereuromark.github.io/cakephp-ide-helper/",
             "keywords": [
                 "annotations",
                 "autocomplete",
@@ -3273,7 +3273,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-05-04T20:20:08+00:00"
+            "time": "2026-05-11T20:18:27+00:00"
         },
         {
             "name": "doctrine/sql-formatter",
@@ -7167,16 +7167,16 @@
         },
         {
             "name": "twig/twig",
-            "version": "v3.24.0",
+            "version": "v3.25.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "a6769aefb305efef849dc25c9fd1653358c148f0"
+                "reference": "0dade995be754556af4dcbf8721d45cb3271f9b4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/a6769aefb305efef849dc25c9fd1653358c148f0",
-                "reference": "a6769aefb305efef849dc25c9fd1653358c148f0",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/0dade995be754556af4dcbf8721d45cb3271f9b4",
+                "reference": "0dade995be754556af4dcbf8721d45cb3271f9b4",
                 "shasum": ""
             },
             "require": {
@@ -7231,7 +7231,7 @@
             ],
             "support": {
                 "issues": "https://github.com/twigphp/Twig/issues",
-                "source": "https://github.com/twigphp/Twig/tree/v3.24.0"
+                "source": "https://github.com/twigphp/Twig/tree/v3.25.0"
             },
             "funding": [
                 {
@@ -7243,7 +7243,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-03-17T21:31:11+00:00"
+            "time": "2026-05-17T07:41:26+00:00"
         }
     ],
     "aliases": [],
