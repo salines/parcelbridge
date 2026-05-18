@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "73ec1ab472cdfcecfaa577c05b8b2dd8",
+    "content-hash": "74abf2ea4addfb68917d6e228b1f9a52",
     "packages": [
         {
             "name": "cakephp/authentication",
@@ -785,16 +785,16 @@
         },
         {
             "name": "friendsofcake/search",
-            "version": "7.8.0",
+            "version": "7.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfCake/search.git",
-                "reference": "e2e718b66d4830b46181d48830a52970970c4ef9"
+                "reference": "f2187d19d9a99669563587d34264868310b82746"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfCake/search/zipball/e2e718b66d4830b46181d48830a52970970c4ef9",
-                "reference": "e2e718b66d4830b46181d48830a52970970c4ef9",
+                "url": "https://api.github.com/repos/FriendsOfCake/search/zipball/f2187d19d9a99669563587d34264868310b82746",
+                "reference": "f2187d19d9a99669563587d34264868310b82746",
                 "shasum": ""
             },
             "require": {
@@ -840,7 +840,7 @@
                 "issues": "https://github.com/FriendsOfCake/search/issues",
                 "source": "https://github.com/FriendsOfCake/search"
             },
-            "time": "2026-02-09T13:29:55+00:00"
+            "time": "2026-05-11T20:20:09+00:00"
         },
         {
             "name": "josegonzalez/cakephp-upload",
