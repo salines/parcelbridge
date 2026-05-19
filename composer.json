@@ -63,11 +63,12 @@
         "post-create-project-cmd": "App\\Console\\Installer::postInstall",
         "check": [
             "@test",
+            "@stan",
             "@cs-check"
         ],
         "cs-check": "phpcs --colors -p",
         "cs-fix": "phpcbf --colors -p",
-        "stan": "phpstan analyse",
+        "stan": "phpstan analyse --memory-limit=512M",
         "test": "phpunit --colors=always"
     }
 }

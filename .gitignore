@@ -55,6 +55,7 @@ nbproject/*
 .sass-cache/
 # node
 /node_modules/*
+/docs/
 # yarn
 yarn-debug.log
 yarn-error.log
