@@ -25,7 +25,7 @@
         "mobiledetect/mobiledetectlib": "^4.8.03"
     },
     "require-dev": {
-        "cakedc/cakephp-phpstan": "4.1.1",
+        "cakedc/cakephp-phpstan": "4.2.0",
         "cakephp/bake": "^3.6",
         "cakephp/cakephp-codesniffer": "^5.3",
         "cakephp/debug_kit": "^5.2",
