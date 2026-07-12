@@ -117,7 +117,7 @@ class Application extends BaseApplication implements AuthenticationServiceProvid
                 'httponly' => true,
             ]))->skipCheckCallback(
                 fn(ServerRequestInterface $request): bool => $request instanceof ServerRequest
-                    && $request->getParam('prefix') === 'Api',
+                    && $request->getUri()->getPath() === '/api/login',
             ));
 
         return $middlewareQueue;

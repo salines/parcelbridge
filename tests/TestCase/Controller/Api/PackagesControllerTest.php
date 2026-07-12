@@ -62,6 +62,7 @@ class PackagesControllerTest extends TestCase
     {
         $this->loginAdmin();
         $this->jsonRequest();
+        $this->enableCsrfToken();
 
         $this->post('/api/packages/1/ready-for-pickup');
 
@@ -71,6 +72,16 @@ class PackagesControllerTest extends TestCase
             'Package status cannot transition',
             $this->jsonPayload()['error']['message'],
         );
+    }
+
+    public function testStateChangingEndpointRequiresCsrfToken(): void
+    {
+        $this->loginAdmin();
+        $this->jsonRequest();
+
+        $this->post('/api/packages/1/ready-for-pickup');
+
+        $this->assertResponseCode(403);
     }
 
     private function loginAdmin(): void

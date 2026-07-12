@@ -6,6 +6,7 @@ namespace App\Controller\Api;
 use App\Model\Enum\InvoiceReviewStatus;
 use App\Model\Enum\PackageStatus;
 use App\Model\Enum\UserRole;
+use App\Service\InvoiceUploadValidator;
 use Cake\Datasource\EntityInterface;
 use Cake\I18n\DateTime;
 use Cake\ORM\Table;
@@ -93,42 +94,33 @@ class PackagesController extends AppController
             return;
         }
 
-        $allowedTypes = ['application/pdf', 'image/jpeg', 'image/png'];
-        if (!in_array($file->getClientMediaType(), $allowedTypes, true)) {
-            $this->jsonError(__('The invoice must be a PDF, JPG, or PNG file.'));
-
-            return;
-        }
-
         if ($file->getSize() > 5 * 1024 * 1024) {
             $this->jsonError(__('The invoice file must be 5 MB or smaller.'));
 
             return;
         }
 
-        $originalFilename = (string)$file->getClientFilename();
-        $extension = pathinfo($originalFilename, PATHINFO_EXTENSION);
-        if ($extension === '') {
-            $extensions = [
-                'application/pdf' => 'pdf',
-                'image/jpeg' => 'jpg',
-                'image/png' => 'png',
-            ];
-            $extension = $extensions[(string)$file->getClientMediaType()];
+        $fileInfo = (new InvoiceUploadValidator())->inspect($file);
+        if ($fileInfo === null) {
+            $this->jsonError(__('The invoice must be a PDF, JPG, or PNG file.'));
+
+            return;
         }
 
-        $filename = sprintf('package-%d-%s.%s', $package->id, bin2hex(random_bytes(8)), strtolower($extension));
+        $originalFilename = (string)$file->getClientFilename();
+        $filename = sprintf('package-%d-%s.%s', $package->id, bin2hex(random_bytes(8)), $fileInfo['extension']);
         $relativePath = 'pdf/invoices/' . $filename;
 
         $invoices = $this->fetchTable('Invoices');
         $invoice = $package->invoice ?? $invoices->newEmptyEntity();
+        $previousFilePath = $invoice->file_path;
         $invoice = $invoices->patchEntity($invoice, [
             'package_id' => $package->id,
             'uploaded_by_user_id' => $this->currentUserId(),
             'reviewed_by_user_id' => null,
             'file_path' => $relativePath,
             'original_filename' => $originalFilename,
-            'mime_type' => $file->getClientMediaType(),
+            'mime_type' => $fileInfo['mime_type'],
             'file_size' => $file->getSize(),
             'review_status' => InvoiceReviewStatus::Pending->value,
             'admin_notes' => null,
@@ -165,6 +157,8 @@ class PackagesController extends AppController
             return;
         }
 
+        $this->deleteReplacedInvoiceFile($previousFilePath, $relativePath);
+
         $invoice = $invoices->get($invoice->id, contain: ['Packages']);
         $this->json(['invoice' => $this->invoiceResource($invoice)], 201);
     }
@@ -196,6 +190,28 @@ class PackagesController extends AppController
         ]);
 
         return !in_array(false, $writer->write([$source => 'invoices/' . $filename]), true);
+    }
+
+    /**
+     * Remove the previous generated invoice file after a successful replacement.
+     *
+     * @param string|null $previousPath Previous relative file path
+     * @param string $currentPath Current relative file path
+     * @return void
+     */
+    private function deleteReplacedInvoiceFile(?string $previousPath, string $currentPath): void
+    {
+        if ($previousPath === null || $previousPath === $currentPath) {
+            return;
+        }
+        if (!preg_match('#^pdf/invoices/package-\d+-[a-f0-9]{16}\.(?:pdf|jpg|png)$#', $previousPath)) {
+            return;
+        }
+
+        $path = RESOURCES . str_replace('/', DS, $previousPath);
+        if (is_file($path)) {
+            unlink($path);
+        }
     }
 
     /**

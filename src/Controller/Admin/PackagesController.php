@@ -8,6 +8,7 @@ use App\Model\Enum\DimensionUnit;
 use App\Model\Enum\PackageStatus;
 use App\Model\Enum\UserRole;
 use App\Model\Enum\WeightUnit;
+use Cake\Database\Exception\QueryException;
 use Cake\Datasource\EntityInterface;
 use Cake\I18n\DateTime;
 use InvalidArgumentException;
@@ -206,10 +207,15 @@ class PackagesController extends AppController
         $this->request->allowMethod(['post', 'delete']);
         $package = $this->Packages->get($id);
         $this->Authorization->authorize($package);
-        if ($this->Packages->delete($package)) {
-            $this->Flash->success(__('The record has been deleted.'));
+        try {
+            $deleted = $this->Packages->delete($package);
+        } catch (QueryException) {
+            $deleted = false;
+        }
+        if (!$deleted) {
+            $this->Flash->error(__('This package cannot be deleted because it has related operational records.'));
         } else {
-            $this->Flash->error(__('The record could not be deleted. Please try again.'));
+            $this->Flash->success(__('The record has been deleted.'));
         }
 
         return $this->redirect(['action' => 'index']);

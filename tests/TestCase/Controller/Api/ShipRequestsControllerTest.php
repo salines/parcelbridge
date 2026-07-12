@@ -39,6 +39,7 @@ class ShipRequestsControllerTest extends TestCase
         $packages->updateAll(['status' => 'invoice_approved'], ['id' => 1]);
         $this->loginClient();
         $this->jsonRequest();
+        $this->enableCsrfToken();
 
         $this->post('/api/ship-requests', [
             'package_ids' => [1],
@@ -56,6 +57,7 @@ class ShipRequestsControllerTest extends TestCase
     {
         $this->loginClient();
         $this->jsonRequest();
+        $this->enableCsrfToken();
 
         $this->post('/api/ship-requests', [
             'package_ids' => [1],

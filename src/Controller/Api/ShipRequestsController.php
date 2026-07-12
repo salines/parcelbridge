@@ -127,7 +127,6 @@ class ShipRequestsController extends AppController
 
             return;
         }
-
         foreach ($shipRequest->packages_ship_requests as $join) {
             if ($join->package->status !== PackageStatus::ShipRequested) {
                 $this->jsonError(__('All packages must be ready for shipment before processing.'));
@@ -136,17 +135,30 @@ class ShipRequestsController extends AppController
             }
         }
 
-        $processed = $this->ShipRequests->getConnection()->transactional(function () use ($shipRequest): ShipRequest|false {
-            $shipRequest = $this->ShipRequests->patchEntity($shipRequest, [
-                'status' => ShipRequestStatus::Processed->value,
-                'processed_by_user_id' => $this->currentUserId(),
-                'processed_at' => DateTime::now(),
-                'processing_reference' => $this->request->getData('processing_reference'),
-            ]);
-
-            $shipRequest = $this->ShipRequests->save($shipRequest);
-            if (!$shipRequest) {
+        $processed = $this->ShipRequests->getConnection()->transactional(function () use ($id): ShipRequest|false {
+            $now = DateTime::now();
+            $updated = $this->ShipRequests->updateAll(
+                [
+                    'status' => ShipRequestStatus::Processed->value,
+                    'processed_by_user_id' => $this->currentUserId(),
+                    'processed_at' => $now,
+                    'processing_reference' => $this->request->getData('processing_reference'),
+                    'modified' => $now,
+                ],
+                [
+                    'id' => $id,
+                    'status' => ShipRequestStatus::Submitted->value,
+                ],
+            );
+            if ($updated !== 1) {
                 return false;
+            }
+
+            $shipRequest = $this->ShipRequests->get($id, contain: ['PackagesShipRequests.Packages']);
+            foreach ($shipRequest->packages_ship_requests as $join) {
+                if ($join->package->status !== PackageStatus::ShipRequested) {
+                    return false;
+                }
             }
 
             foreach ($shipRequest->packages_ship_requests as $join) {

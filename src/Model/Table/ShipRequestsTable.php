@@ -15,6 +15,7 @@ use Cake\ORM\RulesChecker;
 use Cake\ORM\Table;
 use Cake\Validation\Validator;
 use InvalidArgumentException;
+use RuntimeException;
 
 /**
  * ShipRequests Model
@@ -201,25 +202,39 @@ class ShipRequestsTable extends Table
             throw new InvalidArgumentException(__('Select at least one package.'));
         }
 
-        $packagesTable = $this->PackagesShipRequests->Packages;
-        $packages = $packagesTable->find()
-            ->where([
-                'Packages.id IN' => $packageIds,
-                'Packages.client_id' => $clientId,
-                'Packages.status' => PackageStatus::InvoiceApproved->value,
-            ])
-            ->all();
-
-        if ($packages->count() !== count($packageIds)) {
-            throw new InvalidArgumentException(__('Only approved packages can be submitted.'));
-        }
-
         return $this->getConnection()->transactional(function () use (
             $clientId,
             $submittedByUserId,
-            $packagesTable,
-            $packages,
+            $packageIds,
         ): ShipRequest|false {
+            $packagesTable = $this->PackagesShipRequests->Packages;
+            $packages = $packagesTable->find()
+                ->where([
+                    'Packages.id IN' => $packageIds,
+                    'Packages.client_id' => $clientId,
+                ])
+                ->all();
+
+            if ($packages->count() !== count($packageIds)) {
+                throw new InvalidArgumentException(__('Only approved packages can be submitted.'));
+            }
+
+            $now = DateTime::now();
+            $updated = $packagesTable->updateAll(
+                [
+                    'status' => PackageStatus::ShipRequested->value,
+                    'modified' => $now,
+                ],
+                [
+                    'id IN' => $packageIds,
+                    'client_id' => $clientId,
+                    'status' => PackageStatus::InvoiceApproved->value,
+                ],
+            );
+            if ($updated !== count($packageIds)) {
+                throw new InvalidArgumentException(__('Only approved packages can be submitted.'));
+            }
+
             $packageList = [];
             foreach ($packages as $package) {
                 if (!$package instanceof PackageEntity) {
@@ -252,13 +267,18 @@ class ShipRequestsTable extends Table
             }
 
             foreach ($packageList as $package) {
-                $packagesTable->transitionStatus(
-                    $package,
-                    PackageStatus::ShipRequested,
-                    $submittedByUserId,
-                    UserRole::Client,
-                    __('Client submitted ship request.'),
-                );
+                if (
+                    !$packagesTable->recordStatusHistory(
+                        $package,
+                        PackageStatus::InvoiceApproved,
+                        PackageStatus::ShipRequested,
+                        $submittedByUserId,
+                        UserRole::Client,
+                        __('Client submitted ship request.'),
+                    )
+                ) {
+                    throw new RuntimeException(__('The package status could not be updated.'));
+                }
             }
 
             return $shipRequest;

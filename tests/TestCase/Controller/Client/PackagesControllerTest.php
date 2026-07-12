@@ -122,7 +122,7 @@ class PackagesControllerTest extends TestCase
         $this->enableSecurityToken();
 
         $tmpFile = tempnam(sys_get_temp_dir(), 's2a-invoice-');
-        file_put_contents($tmpFile, '%PDF test invoice');
+        file_put_contents($tmpFile, "%PDF-1.4\n1 0 obj\n<<>>\nendobj\n%%EOF\n");
 
         $this->post('/client/packages/upload-invoice/1', [
             'invoice_file' => new UploadedFile($tmpFile, filesize($tmpFile), UPLOAD_ERR_OK, 'invoice.pdf', 'application/pdf'),
@@ -139,6 +139,35 @@ class PackagesControllerTest extends TestCase
         $storedPath = RESOURCES . str_replace('/', DS, $invoice->file_path);
         $this->assertFileExists($storedPath);
         unlink($storedPath);
+    }
+
+    public function testUploadInvoiceRemovesReplacedGeneratedFile(): void
+    {
+        $invoices = TableRegistry::getTableLocator()->get('Invoices');
+        $invoice = $invoices->get(1);
+        $invoice->file_path = 'pdf/invoices/package-1-0123456789abcdef.pdf';
+        $invoices->saveOrFail($invoice);
+        $previousPath = RESOURCES . str_replace('/', DS, $invoice->file_path);
+        file_put_contents($previousPath, "%PDF-1.4\n%%EOF\n");
+
+        $user = TableRegistry::getTableLocator()->get('Users')->get(1, contain: ['Clients']);
+        $user->role = UserRole::Client;
+        $this->session(['Auth' => $user]);
+        $this->enableCsrfToken();
+        $this->enableSecurityToken();
+
+        $tmpFile = tempnam(sys_get_temp_dir(), 's2a-invoice-');
+        file_put_contents($tmpFile, "%PDF-1.4\n1 0 obj\n<<>>\nendobj\n%%EOF\n");
+        $this->post('/client/packages/upload-invoice/1', [
+            'invoice_file' => new UploadedFile($tmpFile, filesize($tmpFile), UPLOAD_ERR_OK, 'replacement.pdf', 'application/pdf'),
+        ]);
+
+        $this->assertRedirect('/client/packages/view/1');
+        $this->assertFileDoesNotExist($previousPath);
+        $replacement = $invoices->get(1);
+        $replacementPath = RESOURCES . str_replace('/', DS, $replacement->file_path);
+        $this->assertFileExists($replacementPath);
+        unlink($replacementPath);
     }
 
     public function testUploadInvoiceRejectsInvalidMimeType(): void
@@ -159,6 +188,26 @@ class PackagesControllerTest extends TestCase
         $this->assertRedirect('/client/packages/upload-invoice/1');
         $this->assertFlashMessage('The invoice must be a PDF, JPG, or PNG file.');
         $this->assertFileExists($tmpFile);
+        unlink($tmpFile);
+    }
+
+    public function testUploadInvoiceRejectsSpoofedClientMimeType(): void
+    {
+        $user = TableRegistry::getTableLocator()->get('Users')->get(1, contain: ['Clients']);
+        $user->role = UserRole::Client;
+        $this->session(['Auth' => $user]);
+        $this->enableCsrfToken();
+        $this->enableSecurityToken();
+
+        $tmpFile = tempnam(sys_get_temp_dir(), 's2a-invoice-');
+        file_put_contents($tmpFile, 'plain text disguised as a PDF');
+
+        $this->post('/client/packages/upload-invoice/1', [
+            'invoice_file' => new UploadedFile($tmpFile, filesize($tmpFile), UPLOAD_ERR_OK, 'invoice.pdf', 'application/pdf'),
+        ]);
+
+        $this->assertRedirect('/client/packages/upload-invoice/1');
+        $this->assertFlashMessage('The invoice must be a PDF, JPG, or PNG file.');
         unlink($tmpFile);
     }
 

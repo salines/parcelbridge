@@ -68,6 +68,19 @@ class UsersTableTest extends TestCase
         $this->assertNotEmpty($user->getErrors()['role']);
     }
 
+    public function testValidationRejectsShortPassword(): void
+    {
+        $user = $this->Users->newEntity([
+            'name' => 'Short Password',
+            'email' => 'short-password@example.test',
+            'password' => 'short7!',
+            'role' => 'client',
+            'active' => true,
+        ]);
+
+        $this->assertArrayHasKey('password', $user->getErrors());
+    }
+
     /**
      * Test buildRules method
      *
@@ -79,7 +92,7 @@ class UsersTableTest extends TestCase
         $user = $this->Users->newEntity([
             'name' => 'Duplicate Email',
             'email' => 'admin@example.test',
-            'password' => 'password123',
+            'password' => 'password1234',
             'role' => 'admin',
             'active' => 1,
         ]);

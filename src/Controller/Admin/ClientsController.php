@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace App\Controller\Admin;
 
 use App\Controller\AppController;
+use Cake\Database\Exception\QueryException;
 
 /**
  * Clients Controller
@@ -123,10 +124,15 @@ class ClientsController extends AppController
         $this->request->allowMethod(['post', 'delete']);
         $client = $this->Clients->get($id);
         $this->Authorization->authorize($client);
-        if ($this->Clients->delete($client)) {
-            $this->Flash->success(__('The record has been deleted.'));
+        try {
+            $deleted = $this->Clients->delete($client);
+        } catch (QueryException) {
+            $deleted = false;
+        }
+        if (!$deleted) {
+            $this->Flash->error(__('This client cannot be deleted because it has related operational records.'));
         } else {
-            $this->Flash->error(__('The record could not be deleted. Please try again.'));
+            $this->Flash->success(__('The record has been deleted.'));
         }
 
         return $this->redirect(['action' => 'index']);

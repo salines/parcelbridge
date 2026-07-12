@@ -204,4 +204,20 @@ class PackagesControllerTest extends TestCase
         $this->assertRedirect('/admin/packages');
         $this->assertFalse($packages->exists(['id' => $package->id]));
     }
+
+    public function testDeleteRejectsPackageWithOperationalRecords(): void
+    {
+        $packages = TableRegistry::getTableLocator()->get('Packages');
+        $this->session([
+            'Auth' => TableRegistry::getTableLocator()->get('Users')->get(1),
+        ]);
+        $this->enableCsrfToken();
+        $this->enableSecurityToken();
+
+        $this->post('/admin/packages/delete/1');
+
+        $this->assertRedirect('/admin/packages');
+        $this->assertFlashMessage('This package cannot be deleted because it has related operational records.');
+        $this->assertTrue($packages->exists(['id' => 1]));
+    }
 }

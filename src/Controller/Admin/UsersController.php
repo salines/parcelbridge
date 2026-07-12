@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace App\Controller\Admin;
 
 use App\Controller\AppController;
+use Cake\Database\Exception\QueryException;
 
 /**
  * Users Controller
@@ -114,10 +115,15 @@ class UsersController extends AppController
         $this->request->allowMethod(['post', 'delete']);
         $user = $this->Users->get($id);
         $this->Authorization->authorize($user);
-        if ($this->Users->delete($user)) {
-            $this->Flash->success(__('The record has been deleted.'));
+        try {
+            $deleted = $this->Users->delete($user);
+        } catch (QueryException) {
+            $deleted = false;
+        }
+        if (!$deleted) {
+            $this->Flash->error(__('This user cannot be deleted because it has related operational records. Deactivate the account instead.'));
         } else {
-            $this->Flash->error(__('The record could not be deleted. Please try again.'));
+            $this->Flash->success(__('The record has been deleted.'));
         }
 
         return $this->redirect(['action' => 'index']);

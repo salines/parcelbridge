@@ -79,7 +79,7 @@ class UsersControllerTest extends TestCase
         $this->post('/admin/users/add', [
             'name' => 'New Client',
             'email' => 'new-client@example.test',
-            'password' => 'password123',
+            'password' => 'password1234',
             'role' => 'client',
             'active' => 1,
         ]);
