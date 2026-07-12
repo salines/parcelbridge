@@ -115,6 +115,8 @@ class AppController extends Controller
             ->where(['Clients.user_id' => $userId])
             ->first();
 
-        return $client?->id === null ? null : (int)$client->id;
+        $clientId = $client?->get('id');
+
+        return $clientId === null ? null : (int)$clientId;
     }
 }

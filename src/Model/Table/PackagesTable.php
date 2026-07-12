@@ -309,7 +309,6 @@ class PackagesTable extends Table
     private function assertAllowedTransition(?PackageStatus $oldStatus, PackageStatus $newStatus): void
     {
         $allowed = [
-            null => [PackageStatus::ReadyToSend],
             PackageStatus::ReadyToSend->value => [PackageStatus::PendingInvoiceReview],
             PackageStatus::NeedsReview->value => [PackageStatus::PendingInvoiceReview],
             PackageStatus::PendingInvoiceReview->value => [
@@ -324,8 +323,11 @@ class PackagesTable extends Table
             ],
             PackageStatus::ReadyForPickup->value => [PackageStatus::Delivered],
         ];
+        $allowedTransitions = $oldStatus === null
+            ? [PackageStatus::ReadyToSend]
+            : ($allowed[$oldStatus->value] ?? []);
 
-        if (!in_array($newStatus, $allowed[$oldStatus?->value] ?? [], true)) {
+        if (!in_array($newStatus, $allowedTransitions, true)) {
             throw new InvalidArgumentException(__(
                 'Package status cannot transition from {0} to {1}.',
                 $oldStatus === null ? __('new') : $oldStatus->label(),
